@@ -1,0 +1,208 @@
+:root {
+	/* dark shades of primary color*/
+	--clr-primary-1: hsl(205, 86%, 17%);
+	--clr-primary-2: hsl(205, 77%, 27%);
+	--clr-primary-3: hsl(205, 72%, 37%);
+	--clr-primary-4: hsl(205, 63%, 48%);
+	/* primary/main color */
+	--clr-primary-5: hsl(205, 78%, 60%);
+	/* lighter shades of primary color */
+	--clr-primary-6: hsl(205, 89%, 70%);
+	--clr-primary-7: hsl(205, 90%, 76%);
+	--clr-primary-8: hsl(205, 86%, 81%);
+	--clr-primary-9: hsl(205, 90%, 88%);
+	--clr-primary-10: hsl(205, 100%, 96%);
+	/* darkest grey - used for headings */
+	--clr-grey-1: hsl(209, 61%, 16%);
+	--clr-grey-2: hsl(211, 39%, 23%);
+	--clr-grey-3: hsl(209, 34%, 30%);
+	--clr-grey-4: hsl(209, 28%, 39%);
+	/* grey used for paragraphs */
+	--clr-grey-5: hsl(210, 22%, 49%);
+	--clr-grey-6: hsl(209, 23%, 60%);
+	--clr-grey-7: hsl(211, 27%, 70%);
+	--clr-grey-8: hsl(210, 31%, 80%);
+	--clr-grey-9: hsl(212, 33%, 89%);
+	--clr-grey-10: hsl(210, 36%, 96%);
+	--clr-white: #fff;
+	--clr-red-dark: hsl(360, 67%, 44%);
+	--clr-red-light: hsl(360, 71%, 66%);
+	--clr-green-dark: hsl(125, 67%, 44%);
+	--clr-green-light: hsl(125, 71%, 66%);
+	--clr-black: #222;
+	--transition: all 0.3s linear;
+	--spacing: 0.1rem;
+	--radius: 0.25rem;
+	--light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+	--dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	--max-width: 1170px;
+	--fixed-width: 620px;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+body {
+	background-color: var(--clr-grey-8);
+	width: 100%;
+	height: auto;
+}
+
+.country-picker-container {
+	margin-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
+	min-width: 200px;
+	width: 30%;
+	border-radius: 2em;
+	animation: fadeIn 2s;
+	animation-timing-function: ease-in;
+}
+
+.country-picker {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-control {
+	background-color: var(--clr-white);
+	border-radius: 2em;
+}
+
+.underline {
+	width: 50%;
+	height: 0.25rem;
+
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.covid-information-section {
+	align-content: center;
+
+	margin-top: 2em;
+	margin-bottom: 3em;
+	margin-left: auto;
+	margin-right: auto;
+
+	min-width: 300px;
+}
+
+.card-container {
+	display: flex;
+	max-width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media screen and (max-width: 1557px) {
+	.covid-information-section {
+		width: 300px;
+		margin-left: 2em;
+		margin-right: 3em;
+	}
+	.card-container {
+		flex-direction: column;
+		max-width: none;
+		width: 100%;
+	}
+
+	.card {
+		margin-bottom: 1.5em;
+	}
+
+	.app-child {
+		display: flex;
+	}
+
+	.graph-container {
+		margin-top: auto;
+		margin-bottom: auto;
+	}
+
+	.line-graph {
+		max-height: 400px;
+		max-width: 90%;
+	}
+}
+
+.card {
+	min-width: 300px;
+	min-height: 300px;
+	background-color: var(--clr-white);
+
+	max-width: 400px;
+
+	border-radius: 2em;
+
+	width: 100%;
+	height: 300px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+	animation: fadeIn 2s;
+	animation-timing-function: ease-in;
+
+	cursor: pointer;
+}
+
+.center-container {
+	display: inline-block;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.type-headline {
+	margin-bottom: 0;
+	font-weight: 700;
+	text-align: center;
+}
+
+.center-container > h2,
+h3 {
+	margin-left: 10px;
+	color: var(--clr-grey-6);
+}
+
+.card-data {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.card-data > h2 {
+	color: var(--clr-grey-3);
+	font-weight: 600;
+	margin-bottom: 0;
+	margin-top: 5px;
+}
+
+#total-data {
+	margin-top: 5px;
+}
+
+.card-data > h3 {
+	margin-top: 40px;
+}
+
+.graph-container {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.line-graph {
+	max-height: 400px;
+	animation: fadeIn 2s;
+	animation-timing-function: ease-in;
+	min-width: 700px;
+	min-height: 400px;
+}
